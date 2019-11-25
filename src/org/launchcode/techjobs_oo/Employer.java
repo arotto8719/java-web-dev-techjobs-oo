@@ -21,6 +21,7 @@ public class Employer {
 
     @Override
     public String toString() {
+
         return value;
     }
 
@@ -34,20 +35,24 @@ public class Employer {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(getId());
     }
 
-    // Getters and Setters:
+    // Getters and Setters: where does unique Employee Id go?
 
     public int getId() {
+
         return id;
     }
 
     public String getValue() {
+
         return value;
     }
 
     public void setValue(String value) {
+
         this.value = value;
     }
 }
