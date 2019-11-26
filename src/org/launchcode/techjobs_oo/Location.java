@@ -59,12 +59,4 @@ public class Location {
 
         value = aValue;
     }
-
-    public String getValue() {
-
-    }
-    public void setValue(String value) {
-
-        this.value = value;
-    }
 }
