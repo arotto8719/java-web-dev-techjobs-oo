@@ -2,7 +2,6 @@ package Tests;
 
 import org.junit.Test;
 import org.launchcode.techjobs_oo.*;
-
 import static org.junit.Assert.*;
 
 public class JobTest {
@@ -21,10 +20,10 @@ public class JobTest {
         assertTrue(nameJob.getCoreCompetency() instanceof CoreCompetency);
 
         assertEquals(nameJob.getName(),"Product tester" );
-        assertEquals(nameJob.getEmployer().getValue(),"ACME");
-        assertEquals(nameJob.getLocation().getValue(),"Desert");
-        assertEquals(nameJob.getPositionType().getValue(),"Quality control");
-        assertEquals(nameJob.getCoreCompetency().getValue(),"Persistence");
+        assertEquals(nameJob.getEmployer().toString(),"ACME");
+        assertEquals(nameJob.getLocation().toString(),"Desert");
+        assertEquals(nameJob.getPositionType().toString(),"Quality control");
+        assertEquals(nameJob.getCoreCompetency().toString(),"Persistence");
 
     }
     @Test
@@ -32,5 +31,10 @@ public class JobTest {
         Job equalJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         Job falseJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertFalse(equalJob == falseJob);
+    }
+    @Test
+    public void testBlankToString() {
+        Job blankJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertEquals(blankJob.toString(), "\n\n");
     }
 }
