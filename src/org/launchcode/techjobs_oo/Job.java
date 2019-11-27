@@ -49,9 +49,13 @@ public class Job {
 
     @Override
     public String toString() {
-     return ("\n \n");
-//        if()
-//        return "Job{" +
+        return ("\n \n");
+        if(public String toString = "\n \n") {
+        System.out.println("Data not available");
+        }
+        return "Job{" + "id=" + id + ", name='" + name + '\'' + ", employer=" + employer + ", location=" + location + ", positionType=" + positionType + ", coreCompetency=" + coreCompetency + '}';
+    }
+//     return "Job{" +
 //                "id=" + id +
 //                ", name='" + name + '\'' +
 //                ", employer=" + employer +
@@ -59,23 +63,26 @@ public class Job {
 //                ", positionType=" + positionType +
 //                ", coreCompetency=" + coreCompetency +
 //                '}';
-    }
 // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public Employer getEmployer() {
+
         return employer;
     }
 
     public void setEmployer(Employer employer) {
+
         this.employer = employer;
     }
 
@@ -88,21 +95,26 @@ public class Job {
     }
 
     public PositionType getPositionType() {
+
         return positionType;
     }
 
     public void setPositionType(PositionType positionType) {
+
         this.positionType = positionType;
     }
 
     public CoreCompetency getCoreCompetency() {
+
         return coreCompetency;
     }
 
     public void setCoreCompetency(CoreCompetency coreCompetency) {
+
         this.coreCompetency = coreCompetency;
     }
     public int getId() {
+
         return id;
     }
 }
