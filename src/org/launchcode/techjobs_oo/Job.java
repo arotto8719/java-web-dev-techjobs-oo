@@ -1,5 +1,7 @@
 package org.launchcode.techjobs_oo;
 
+import org.junit.Test;
+
 import java.util.Objects;
 
 public class Job {
@@ -49,20 +51,29 @@ public class Job {
 
     @Override
     public String toString() {
-        return ("\n \n");
-        if(public String toString = "\n \n") {
-        System.out.println("Data not available");
+//        if(id.toString() == "") {
+//            System.out.println("OOPS! This job does not seem to exist");
+//        }
+        if(name.toString() == "") {
+            return "Data not available";
+        }
+        if(employer.toString() == "") {
+            return "Data not available";
+        }
+        if(location.toString() == "") {
+            return "Data not available";
+        }
+        if(positionType.toString() == "") {
+            return "Data not available";
+        }
+        if(coreCompetency.toString() == "") {
+            return "Data not available";
         }
         return "Job{" + "id=" + id + ", name='" + name + '\'' + ", employer=" + employer + ", location=" + location + ", positionType=" + positionType + ", coreCompetency=" + coreCompetency + '}';
     }
-//     return "Job{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", employer=" + employer +
-//                ", location=" + location +
-//                ", positionType=" + positionType +
-//                ", coreCompetency=" + coreCompetency +
-//                '}';
+//    @Test
+//    public void toString() {
+//    }
 // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
 
