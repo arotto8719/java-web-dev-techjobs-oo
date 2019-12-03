@@ -51,25 +51,31 @@ public class Job {
 
     @Override
     public String toString() {
+        String Id = "\nID: " + id;
+        String name = "\nName: " + this.name;
+        String employer = "\nEmployer: " + this.employer;
+        String location = "\nLocation: " + this.location;
+        String positionType = "\nPosition Type: " + this.positionType;
+        String coreCompetency = "\nCore Competency: " + this.coreCompetency;
 //        if(id.toString() == "") {
 //            System.out.println("OOPS! This job does not seem to exist");
 //        }
-        if(name.toString() == "") {
-            return "Data not available";
+        if(this.name == "") {
+            name = "\nName: Data not available";
         }
-        if(employer.toString() == "") {
-            return "Data not available";
+        if(this.employer.toString() == "") {
+            employer = "\nEmployer: Data not available";
         }
-        if(location.toString() == "") {
-            return "Data not available";
+        if(this.location.toString() == "") {
+            location = "\nLocation: Data not available";
         }
-        if(positionType.toString() == "") {
-            return "Data not available";
+        if(this.positionType.toString() == "") {
+            positionType = "\nPosition Type: Data not available";
         }
-        if(coreCompetency.toString() == "") {
-            return "Data not available";
+        if(this.coreCompetency.toString() == "") {
+            coreCompetency = "\nCore Competency: Data not available";
         }
-        return "Job{" + "id=" + id + ", name='" + name + '\'' + ", employer=" + employer + ", location=" + location + ", positionType=" + positionType + ", coreCompetency=" + coreCompetency + '}';
+        return Id + name + employer + location + positionType + coreCompetency + "\n";
     }
 //    @Test
 //    public void toString() {
